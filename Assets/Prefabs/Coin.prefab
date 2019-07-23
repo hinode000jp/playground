@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 5490677523373515037}
   - component: {fileID: 5490677523373515038}
   - component: {fileID: 5490677523373515035}
-  - component: {fileID: 5490677523373515034}
+  - component: {fileID: 1036146839295068221}
+  - component: {fileID: -6340701409761458423}
+  - component: {fileID: 7916484981123526215}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -95,7 +97,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -156,7 +158,35 @@ PolygonCollider2D:
       - {x: 0.23828125, y: -0.61328125}
       - {x: 0.35546875, y: -0.55078125}
       - {x: 0.59765625, y: -0.33203125}
---- !u!114 &5490677523373515034
+--- !u!114 &1036146839295068221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490677523373515039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f0bfabf363d4ec5993fbd4f9908ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 0}
+  direction: {x: 0, y: -20}
+  relativeToRotation: 1
+--- !u!114 &-6340701409761458423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490677523373515039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8862ea7b10c84421c9485c36f04335a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestruction: 5
+--- !u!114 &7916484981123526215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
