@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Sounds : MonoBehaviour
 {
-    AudioSource getSE;
+
+    public AudioClip sound1;
+    public AudioClip sound2;
+
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
-    {        getSE = GetComponent<AudioSource>();    }
+    {        audioSource = GetComponent<AudioSource>();    }
 
     // Update is called once per frame
     void Update()
     {
         
     }
+    private void OnTriggerEnter2D(Collider2D collision)    {        audioSource.PlayOneShot(sound1);    }
 
-    private void OnTriggerEnter(Collider other)    {        if (other.gameObject.CompareTag("Player"))        {                        getSE.Play();        }    }
-    private void OnCollisionEnter(Collision collision)    {        if (collision.gameObject.CompareTag("Player"))        {            getSE.Play();        }    }
+    private void OnCollisionEnter2D(Collision2D collision)    {        audioSource.PlayOneShot(sound2);    }
 }
