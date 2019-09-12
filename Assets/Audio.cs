@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sounds : MonoBehaviour
+public class Audio : MonoBehaviour
 {
-
     public AudioClip pointUpSE;
     public AudioClip damageSE;
 
@@ -16,10 +15,8 @@ public class Sounds : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)    {        audioSource.PlayOneShot(pointUpSE);    }
+    {    }
+    void OnTriggerEnter2D(Collider2D collision)    {        audioSource.PlayOneShot(pointUpSE);    }
 
-    private void OnCollisionEnter2D(Collision2D collision)    {        if (collision.gameObject.CompareTag("Bomb"))        {            audioSource.PlayOneShot(damageSE);        }    }
-}
+    void OnCollisionEnter2D(Collision2D collision)    {        if (collision.gameObject.CompareTag("Bomb"))        {            audioSource.PlayOneShot(damageSE);        }    }
+}　　
